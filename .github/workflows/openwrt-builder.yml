@@ -1,3 +1,4 @@
+
 #
 # https://github.com/P3TERX/Actions-OpenWrt
 #
@@ -92,17 +93,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-
-        # 尝试多线程编译
-        if ! make -j$(nproc); then
-          echo "Multi-threaded compilation failed, trying single-threaded compilation..."
-          if ! make -j1; then
-            echo "Single-threaded compilation also failed, running with verbosity for debugging..."
-            make -j1 V=s  # 以单线程模式运行并输出详细日志
-            exit 1  # 如果单线程编译失败，退出
-          fi
-        fi
-        
+        make -j$(nproc) || make -j1 || make -j1 V=s
         echo "status=success" >> $GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
