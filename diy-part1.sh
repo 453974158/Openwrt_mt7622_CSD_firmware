@@ -40,5 +40,4 @@ sed -i 's/config-5.10/config-5.15/' MT7622-mtkwifi/patches/general/1_add_mtkhnat
 sed -i 's/@@ -297,7 +297,7 @@/@@ -340,7 +340,7 @@/' MT7622-mtkwifi/patches/general/2_change_mt7622_device_packages.patch
 sed -i 's/kmod-mt7915e/kmod-mt7915-firmware/' MT7622-mtkwifi/patches/general/2_change_mt7622_device_packages.patch
 sed -i 's/ports="$device"/ports="$ifname"/' MT7622-mtkwifi/patches/luci_new/1_add_wifi_to_br-lan_by_default.patch
-sed -i 's/^\[ -n "\$ports" -a -z "\$bridge" \]$/[ -n "$ports" ]/' MT7622-mtkwifi/patches/luci_new/1_add_wifi_to_br-lan_by_default.patch
-
+sed -i 's/\[ -n "\$ports" -a -z "\$bridge" \]/\[ -n "\$bridge" \]/' MT7622-mtkwifi/patches/luci_new/1_add_wifi_to_br-lan_by_default.patch
