@@ -34,3 +34,5 @@ git clone https://github.com/hpx502766238/MT7622-mtkwifi
 #cp -rf MT7622-mtkwifi/target/* target/
 #解决循环依赖
 sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/config.in
+sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/src/Kconfig
+sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/src/mt_wifi/embedded/Kconfig
