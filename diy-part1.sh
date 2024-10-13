@@ -28,9 +28,9 @@
 #git clone https://github.com/zzsj0928/luci-app-pushbot
 
 #下载闭源驱动并覆盖
-git clone https://github.com/bricco1981/MT7622-mtkwifi
-cp -r MT7622-mtkwifi/package/mtk/ package/
+git clone https://github.com/hpx502766238/MT7622-mtkwifi
+#cp -r MT7622-mtkwifi/package/mtk/ package/
 #cp -r MT7622-mtkwifi/package/mtk/mt7622/ package/lean/mt/drivers/
-cp -rf MT7622-mtkwifi/target/* target/
+#cp -rf MT7622-mtkwifi/target/* target/
 #解决循环依赖
-sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mediatek_hnat/depends on PACKAGE_kmod-mediatek_hnat/' package/mtk/mt7915/config.in
+#sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mediatek_hnat/depends on PACKAGE_kmod-mediatek_hnat/' package/mtk/mt7915/config.in
