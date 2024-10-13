@@ -37,3 +37,5 @@ sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PAC
 sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/src/Kconfig
 sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/src/mt_wifi/embedded/Kconfig
 sed -i 's/config-5.10/config-5.15/' MT7622-mtkwifi/patches/general/1_add_mtkhnat_modules.patch
+sed -i 's/@@ -297,7 +297,7 @@/@@ -340,7 +340,7 @@/' MT7622-mtkwifi/patches/general/2_change_mt7622_device_packages.patch
+sed -i 's/kmod-mt7915e/kmod-mt7915-firmware/' MT7622-mtkwifi/patches/general/2_change_mt7622_device_packages.patch
