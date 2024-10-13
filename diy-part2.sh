@@ -10,6 +10,8 @@
 # See /LICENSE for more information.
 #
 
+(cd MT7622-mtkwifi && chmod +x ./install.sh && ./install.sh -n)
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.50.1/g' package/base-files/files/bin/config_generate
 
