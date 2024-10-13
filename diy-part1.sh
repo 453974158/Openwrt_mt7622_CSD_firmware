@@ -36,3 +36,4 @@ git clone https://github.com/hpx502766238/MT7622-mtkwifi
 sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/config.in
 sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/src/Kconfig
 sed -i 's/depends on PACKAGE_kmod-hw_nat || PACKAGE_kmod-mtk-hnat/depends on PACKAGE_kmod-mtk-hnat/' MT7622-mtkwifi/package/mtk/mt7915/src/mt_wifi/embedded/Kconfig
+sed -i 's/config-5.10/config-5.15/' MT7622-mtkwifi/patches/general/1_add_mtkhnat_modules.patch
